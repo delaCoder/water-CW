@@ -1,0 +1,144 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: url(../images/infusedWater.jpg) no-repeat fixed right bottom;
+}
+
+#wrapper {
+    margin: 2em auto;
+    padding: 2em;
+    max-width: 650px;
+    border: solid 3px #d3e203;
+    background-color: rgba(255,255,255,.8);
+    border-radius: 15px;
+    position: relative;
+}
+
+h1 {
+    color: #9da40e;
+    margin-bottom: .25em;
+}
+
+h2 {
+    color: #951837;
+    margin: .5em 0 .25em;
+}
+
+p {
+    color: #333;
+}
+
+.item p {
+    font-style: italic;
+    color: #fa5c2c;
+}
+
+.cart #results {
+    font-size: 93%;
+    color: #777;
+    min-width: 20em;
+    padding: 1em 15.5em;
+    font-style: italic;
+}
+
+.cart .info, .cart .group {
+    margin-bottom: .5em;
+}
+
+input {
+    border: solid 1px #999;
+    padding: 4px;
+    border-radius: 4px;
+    width: 30px; 
+}
+
+select {
+    border: solid 1px #999;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: #9da40e;
+    color: #fff;
+    width: initial;
+}
+
+input[type="txtEstimate"] {
+    width: 60px;
+}
+
+/* TAB STYLES */
+
+.ready { /* (this is #tabGroup) .ready makes it so if client doesn't have JS it'll still run */
+    position: relative;
+    margin-bottom: 2em;
+}
+
+.ready .tab-header {
+    font-weight: normal;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 4px 6px;
+    position: absolute;
+    top: -1px;
+    left: 0;
+    color: #fff;
+    background-color: #9da40e;
+    border: solid 1px #9da40e;
+    border-radius: 4px 4px 0 0;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.ready #tab-header-2 {
+    left: 14em;
+}
+
+.ready #tab-header-3 {
+    left: 26.1em;
+}
+
+.ready .tab-header.active {
+    background-color: #fff;
+    color: #9da40e;
+    border-bottom-color: #fff;
+}
+
+.ready .tab-content {
+    border: solid 1px #9da40e;
+    padding: .5em;
+    background-color: #fff;
+    min-height: 250px;
+    clear: both;
+    position: relative;
+    top: 24px;
+    z-index: 1;
+    display: none; /* had to set tabContent and tabHeader to active on HTML */
+}
+
+.tab-content:after { /* HAS TO DO WITH FLOAT SO WE DIDN'T ADD .READY... WANT THEM TO RUN WHETHER THEY HAVE JS OR NOT */
+    content: " ";
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+.tab-content img { /* HAS TO DO WITH FLOAT SO WE DIDN'T ADD .READY... WANT THEM TO RUN WHETHER THEY HAVE JS OR NOT */
+    float: right;
+    margin: 0 0 1em 1em;
+}
+
+.tab-content p { /* HAS TO DO WITH FLOAT SO WE DIDN'T ADD .READY... WANT THEM TO RUN WHETHER THEY HAVE JS OR NOT */
+    padding-bottom: 1em;
+    line-height: 1.5;
+}
+
+.ready .tab-content.active {
+    display: block;
+}
+

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infused Water</title>
+    <link rel="stylesheet" href="css/iw.css">
+</head>
+<body>
+    <main id="wrapper">
+        <h1>Infuzed Water</h1>
+        <h2>Thirst Quenching Fruit Infuzed Goodness</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil modi odio quia eveniet a, vero nulla atque reiciendis optio perspiciatis! Molestiae, fuga unde? Aut dolor quae facilis placeat explicabo saepe.</p>
+    
+        <form action="" class="cart" id="cartWater">
+        <article class="item">
+            <h2>Orange and Raspberry</h2>
+            <p>You've never tasted water so delicious.</p>
+            <div class="info"><span>Price: $10/bottle</span></div>
+            <div class="order">
+                <label for="q-or">Quantity Desired: </label>
+                <input type="text" id="q-or" placeholder="0">
+            </div>
+        </article>
+
+        <article class="item">
+            <h2>Cucumber and Mint</h2>
+            <p>So cool and refreshing.</p>
+            <div class="info"><span>Price: $8/bottle</span></div>
+            <div class="order">
+                <label for="q-cm">Quantity Desired: </label>
+                <input type="text" id="q-cm" placeholder="0">
+            </div>
+        </article>
+
+        <article class="item">
+            <h2>Strawberry and Basil</h2>
+            <p>Drink me, just like Alice did.</p>
+            <div class="info"><span>Price: $9/bottle</span></div>
+            <div class="order">
+                <label for="q-sb">Quantity Desired: </label>
+                <input type="text" id="q-sb" placeholder="0">
+            </div>
+        </article>
+
+        <article id="summary">
+            <h2>Estimate Order</h2>
+
+            <div class="group state">
+                <label for="">State: </label>
+                <select name="sState" id="sState">
+                    <option value="">-select-</option>
+                    <option value="CA">California (9.25% tax)</option>
+                    <option value="WA">Washington</option>
+                    <option value="OR">Oregon</option>
+                    <option value="DE">Delware</option>
+                </select>
+            </div>
+
+            <!--div.group.method>h3{Shipping Method}+(br+input#rMethodPickup+label{Pickup (free)})*3-->
+            <div class="group method">
+                <h3>Shipping Method</h3>
+                <input type="radio" id="rMethodPickup" value="pickup" name="rMethod" checked> 
+                <label for="rMethodPickup">Pickup (free)</label>
+                <br>
+                <input type="radio" id="rMethodUsps" value="usps" name="rMethod">
+                <label for="rMethodUsps">US Mail ($2/bottle)</label>
+                <br>
+                <input type="radio" id="rMethodUps" value="ups" name="rMethod">
+                <label for="rMethodUps">UPS ($3/bottle)</label>
+            </div>
+
+            <!--div.group.calc>p>label{Click to estimate}+input#btnEstimate+input#txtEstimate^div#results-->
+            <div class="group calc">
+                <p>
+                    <label for="btnEstimate">Click to estimate</label>
+                    <input type="submit" id="btnEstimate" value="Estimate Total">
+                    <input type="text" id="txtEstimate" placeholder="$0.00"> 
+                </p>
+                <div id="results"></div>
+            </div>
+        </article>
+
+        
+    </form>
+    </main>
+
+    <script src="scripts/iw.js"></script>
+</body>
+</html>
